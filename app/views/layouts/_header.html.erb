@@ -1,11 +1,11 @@
 <heade>
   <nav class="navbar navbar-expand-sm justify-content-between">
-    <a class="navbar-brand text-white" href="/">Webook</a>
+    <a class="navbar-brand nav-hover" href="/">Webook</a>
     <div class="navbar-nav justify-content-end">
       <!--イフ入れる-->
-        <a class="nav-item nav-link active text-white" href="#">My Weboook</a>
+        <%= link_to 'My Weboook', users_path, class: 'nav-link active nav-hover' %>
 
-        <a class="nav-item nav-link active text-white" href="#">ログイン</a>
+        <a class="nav-item nav-link active nav-hover" href="#">ログイン</a>
 
     </div>
   </nav>

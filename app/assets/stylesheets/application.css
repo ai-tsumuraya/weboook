@@ -29,5 +29,35 @@
   margin-left: auto;
   margin-right: auto;
   border-radius: 2%;
-	
+}
+.image-profile {
+  height: auto;
+  width: 50%;
+  float: left;
+	display: block;
+  border-radius: 2%;
+}
+
+.container-profile {
+  height: 70%;
+}
+
+.height-box {
+  height: 200px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+hover:hover {
+  color: rgba(255, 193, 7, 0.5);
+}
+
+.nav-hover {
+  color: white;
+}
+
+.nav-hover:hover, .nav-hover:active {
+  color: rgba(255, 193, 7) !important;
 }
