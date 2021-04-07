@@ -28,7 +28,6 @@
 	display: block;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 2%;
 }
 .image-profile {
   height: auto;
@@ -59,5 +58,21 @@ hover:hover {
 }
 
 .nav-hover:hover, .nav-hover:active {
+  color: rgba(255, 193, 7) !important;
+}
+
+.link1 {
+  color: #f67da2;
+}
+
+.link1:hover, .link1:active {
+  color: rgba(255, 193, 7) !important;
+}
+
+.text-dark {
+  color: black;
+}
+
+.text-dark:hover, .text-dark:active {
   color: rgba(255, 193, 7) !important;
 }

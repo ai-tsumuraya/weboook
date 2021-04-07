@@ -10,7 +10,7 @@
         <li class="my-3"><a class="col-md-3 text-dark" href="#">Saveリスト ></a></li>
       </ul>
       <div class="m-2 height-box d-flex align-items-end">
-        <a class="mx-auto text-dark" href="#">ログアウト</a>
+        <%= link_to 'ログアウト', logout_path, method: :delete, class: 'text-dark mx-auto' %>
       </div>
     </aside>
     <div class="col-sm-8">

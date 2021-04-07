@@ -20,11 +20,11 @@
   </head>
 
   <body>
+    <div class="container">
+        <%= render 'layouts/flash_messages' %>
+    </div>
     <%= render 'layouts/header' %>
     
-    <div class="container">
-      <%= render 'layouts/flash_messages' %>
-    </div>
     <div>
       <%= yield %>
     </div>

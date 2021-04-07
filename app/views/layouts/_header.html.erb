@@ -1,12 +1,12 @@
-<heade>
+<header>
   <nav class="navbar navbar-expand-sm justify-content-between">
     <a class="navbar-brand nav-hover" href="/">Webook</a>
     <div class="navbar-nav justify-content-end">
-      <!--イフ入れる-->
-        <%= link_to 'My Weboook', users_path, class: 'nav-link active nav-hover' %>
-
-        <a class="nav-item nav-link active nav-hover" href="#">ログイン</a>
-
+      <% if logged_in? %>
+        <%= link_to 'My Weboook', user_path(current_user), class: 'nav-link active nav-hover' %>
+      <% else %>
+        <%= link_to 'ログイン', login_path, class: 'nav-link active nav-hover' %>
+      <% end %>
     </div>
   </nav>
   
