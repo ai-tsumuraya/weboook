@@ -1,0 +1,21 @@
+<div class="container">
+  <ul class="list-unstyled row">
+    <% bookmarks.each do |bookmark| %>
+      <li class="media mb-3 col-md-12">
+      <div class="media-body">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title"><%= bookmark.title %></h5>
+          </div>
+          <div class="card-body d-flex justify-content-between">
+            <aside class="block m-2">
+              <%= bookmark.note %>
+            </aside>
+              <a href="<%= bookmark.link %>" class="btn btn-warning block small">もう一度読む</a>
+          </div>
+        </div>
+      </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
