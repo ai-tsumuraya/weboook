@@ -2,11 +2,15 @@ class BookmarksController < ApplicationController
   before_action :require_user_logged_in
   before_action :correct_user, only: [:destroy]
   
+  def new
+    @bookmark = Bookmark.new
+  end
+  
   def create
     @bookmark = current_user.bookmarks.build(bookmark_params)
     if @bookmark.save
       flash[:success] = 'Weboookを追加しました。'
-      redirect_to @user
+      redirect_to root_url
     else
       @bookmarks = @user.bookmarks.order(id: :desc).page(params[:page])
       flash.now[:danger] = 'Weboookを追加に失敗しました。'
