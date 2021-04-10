@@ -3,10 +3,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    if logged_in?
-      @bookmark = @user.bookmarks.build  
-      @bookmarks = @user.bookmarks
-    end
+    @bookmark = @user.bookmarks.build  
+    @bookmarks = @user.bookmarks
   end
 
   def new
