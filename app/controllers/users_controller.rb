@@ -3,7 +3,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    # @bookmark = @user.bookmarks.build  
     @bookmarks = @user.bookmarks
   end
 
