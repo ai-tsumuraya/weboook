@@ -55,7 +55,7 @@ hover:hover {
 }
 
 .nav-hover:hover, .nav-hover:active {
-  color: rgba(255, 193, 7) !important;
+  color: rgb(255, 193, 7) !important;
 }
 
 .link1 {
