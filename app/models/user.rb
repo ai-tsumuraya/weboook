@@ -7,4 +7,19 @@ class User < ApplicationRecord
   has_secure_password
   
   has_many :bookmarks
+  has_many :keeps
+  has_many :saves, through: :keeps, source: :bookmark
+  
+  def save(saved_bookmark)
+    self.keeps.find_or_create_by(bookmark_id: saved_bookmark.id)
+  end
+  
+  def unsave(saved_bookmark)
+    keep = self.keeps.find_by(bookmark_id: saved_bookmark.id) 
+    keep.destroy if keep
+  end
+  
+  def saved?(saved_bookmark)
+    self.saves.include?(saved_bookmark)
+  end
 end

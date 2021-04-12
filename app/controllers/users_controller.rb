@@ -21,6 +21,11 @@ class UsersController < ApplicationController
       render :new
     end
   end
+  
+  def saves
+    @user = User.find(params[:id])
+    @saves = @user.saves.page(params[:page])
+  end
 
   private
 

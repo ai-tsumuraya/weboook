@@ -3,8 +3,9 @@
       <li class="media mb-3 col-md-12">
       <div class="media-body">
         <div class="card">
-          <div class="card-header">
-            <h5 class="card-title"><%= bookmark.title %></h5>
+          <div class="card-header d-flex justify-content-between">
+            <span class="card-title m-0 align-middle"><%= bookmark.title %></span>
+            <span><%= render 'keeps/save_button', bookmark: bookmark %></span>
           </div>
           <div class="card-body d-flex justify-content-between">
             <div class="block m-2">
@@ -14,7 +15,7 @@
               <% if current_user == bookmark.user %>
                 <%= link_to "削除", bookmark, method: :delete, data: { confirm: "本当に削除しますか？" }, class: 'text-muted m-2' %>
               <% end %>
-              <a href="<%= bookmark.link %>" class="btn btn-warning block small">もう一度読む</a>
+              <a target="_blank" href="<%= bookmark.link %>" class="btn btn-warning block small">記事を読む</a>
             </div>
           </div>
         </div>

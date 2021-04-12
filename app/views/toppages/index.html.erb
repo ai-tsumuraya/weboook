@@ -5,7 +5,7 @@
           <h3>Webサイトの記事をBookmarkするサービス</h3>
           <h1>Weboook</h1>
           <% if logged_in? %>
-            <%= link_to 'Weboook', users_path, class: 'btn btn-lg btn-warning' %>
+            <%= link_to 'Weboook', new_bookmark_path, class: 'btn btn-lg btn-warning' %>
           <% else %>
             <%= link_to '今すぐ登録', signup_path, class: 'btn btn-lg btn-warning' %>
           <% end %>

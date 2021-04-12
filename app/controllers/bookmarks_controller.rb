@@ -10,11 +10,10 @@ class BookmarksController < ApplicationController
     @bookmark = current_user.bookmarks.build(bookmark_params)
     if @bookmark.save
       flash[:success] = 'Weboookを追加しました。'
-      redirect_to root_url
+      redirect_to user_path(current_user)
     else
-      @bookmarks = @user.bookmarks.order(id: :desc).page(params[:page])
-      flash.now[:danger] = 'Weboookを追加に失敗しました。'
-      render @user
+      flash.now[:danger] = 'Weboookの追加に失敗しました。'
+      render :new
     end
   end
 
