@@ -63,7 +63,7 @@ hover:hover {
 }
 
 .link1:hover, .link1:active {
-  color: rgba(255, 193, 7) !important;
+  color: rgb(255, 193, 7) !important;
 }
 
 .text-dark {
@@ -71,7 +71,7 @@ hover:hover {
 }
 
 .text-dark:hover, .text-dark:active {
-  color: rgba(255, 193, 7) !important;
+  color: rgb(255, 193, 7) !important;
 }
 
 .card-header {
