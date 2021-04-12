@@ -8,18 +8,27 @@ class User < ApplicationRecord
   
   has_many :bookmarks
   has_many :keeps
-  has_many :saves, through: :keeps, source: :bookmark
+  has_many :stores, through: :keeps, source: :bookmark
   
-  def save(saved_bookmark)
-    self.keeps.find_or_create_by(bookmark_id: saved_bookmark.id)
+  def store(stored_bookmark)
+    self.keeps.find_or_create_by(bookmark_id: stored_bookmark.id)
   end
   
-  def unsave(saved_bookmark)
-    keep = self.keeps.find_by(bookmark_id: saved_bookmark.id) 
+  # def stores
+  #   @user = User.find(params[:id])
+  #   @stores = @user.stores.page(params[:page])
+  # end
+  
+  def unstore(stored_bookmark)
+    keep = self.keeps.find_by(bookmark_id: stored_bookmark.id) 
     keep.destroy if keep
   end
   
-  def saved?(saved_bookmark)
-    self.saves.include?(saved_bookmark)
+  def stored?(stored_bookmark)
+    self.stores.include?(stored_bookmark)
+  end
+  
+  def count_stored()
+    puts self.stores.count()
   end
 end

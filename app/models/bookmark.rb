@@ -6,5 +6,5 @@ class Bookmark < ApplicationRecord
   
   has_many :keeps
   has_many :reverses_of_keep, class_name: 'Keep', foreign_key: 'bookmark_id'
-  has_many :saved_by, through: :reverses_of_keep, source: :user
+  has_many :stored_by, through: :reverses_of_keep, source: :user
 end

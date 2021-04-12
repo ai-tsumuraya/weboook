@@ -1,5 +1,5 @@
 <div class="media-body">
-  <% if current_user.saved?(bookmark) %>
+  <% if current_user.stored?(bookmark) %>
     <%= form_with(model: current_user.keeps.find_by(bookmark_id: bookmark.id), local: true, method: :delete) do |f| %>
       <%= hidden_field_tag :bookmark_id, bookmark.id %>
       <%= f.submit 'Save削除', class: 'btn text-muted' %>

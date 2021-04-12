@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :require_user_logged_in, only: [:index, :show]
+  before_action :require_user_logged_in, only: [:index, :show, :stores]
 
   def show
     @user = User.find(params[:id])
@@ -24,7 +24,7 @@ class UsersController < ApplicationController
   
   def saves
     @user = User.find(params[:id])
-    @saves = @user.saves.page(params[:page])
+    @stores = @user.stores.page(params[:page])
   end
 
   private

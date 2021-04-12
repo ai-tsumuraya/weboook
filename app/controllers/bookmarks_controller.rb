@@ -18,6 +18,7 @@ class BookmarksController < ApplicationController
   end
 
   def destroy
+    puts "deleting?"
     @bookmark.destroy
     flash[:success] = 'Weboookを削除しました。'
     redirect_back(fallback_location: root_path)

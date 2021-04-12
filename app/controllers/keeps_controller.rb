@@ -3,14 +3,14 @@ class KeepsController < ApplicationController
   
   def create
     bookmark = Bookmark.find(params[:bookmark_id])
-    current_user.save(bookmark)
+    current_user.store(bookmark)
     flash[:success] = "Weboookをセーブしました。"
     redirect_to user_path(current_user)
   end
 
   def destroy
     bookmark = Bookmark.find(params[:bookmark_id])
-    current_user.unsave(bookmark)
+    current_user.unstore(bookmark)
     flash[:success] = "Weboookをセーブから削除しました。"
     redirect_to user_path(current_user)
   end
