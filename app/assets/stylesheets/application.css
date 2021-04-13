@@ -1,9 +1,10 @@
 * {
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
+
 .jumbotron {
-  /*background-image: url('Laptop.png');*/
-  background: image_url("Laptop.png");
+  background-image: url('Laptop.png');
+  /*background: image_url("Laptop.png");*/
   background-size:cover;
   background-position: 50% 50%;
   text-align: center;
