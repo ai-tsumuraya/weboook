@@ -4,7 +4,6 @@
 
 .jumbotron {
   background-image: url('Laptop.png');
-  /*background: image_url("Laptop.png");*/
   background-size:cover;
   background-position: 50% 50%;
   text-align: center;
@@ -74,6 +73,10 @@ hover:hover {
 
 .text-dark:hover, .text-dark:active {
   color: rgb(255, 193, 7) !important;
+}
+
+.text-delete:hover, .text-delete:active {
+  color: rgb(51, 51, 51) !important;
 }
 
 .card-header {
