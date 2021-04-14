@@ -1,9 +1,10 @@
 class User < ApplicationRecord
   before_save { self.email.downcase! }
-  validates :name, presence: true, length: { maximum: 50 }
+  validates :name, presence: true, length: { maximum: 50 }, uniqueness: true
   validates :email, presence: true, length: { maximum: 255 },
                     format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i },
                     uniqueness: { case_sensitive: false }
+  
   has_secure_password
   
   has_many :bookmarks
@@ -13,11 +14,6 @@ class User < ApplicationRecord
   def store(stored_bookmark)
     self.keeps.find_or_create_by(bookmark_id: stored_bookmark.id)
   end
-  
-  # def stores
-  #   @user = User.find(params[:id])
-  #   @stores = @user.stores.page(params[:page])
-  # end
   
   def unstore(stored_bookmark)
     keep = self.keeps.find_by(bookmark_id: stored_bookmark.id) 
