@@ -13,9 +13,9 @@
           </div>
           <div>
             <% if current_user == bookmark.user %>
-              <%= link_to "削除", bookmark, method: :delete, data: { confirm: "本当に削除しますか？" }, class: 'text-muted m-2' %>
+              <%= link_to "Delete", bookmark, method: :delete, data: { confirm: "Are you sure you want to delete the Weboook？" }, class: 'text-muted m-2' %>
             <% end %>
-            <a target="_blank" href="<%= bookmark.link %>" class="btn btn-warning block small">記事を読む</a>
+            <a target="_blank" href="<%= bookmark.link %>" class="btn btn-warning block small">READ MORE</a>
           </div>
         </div>
       </div>

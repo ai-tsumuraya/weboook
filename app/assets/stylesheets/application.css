@@ -17,6 +17,10 @@
   background-color: #f67da2;
 }
 
+.navbar-toggler {
+  border: solid 1px;
+  color: white;
+}
 .bold {
   font-weight: bolder;
   background-color: rgba(255, 193, 7, 0.5)
@@ -83,10 +87,10 @@ hover:hover {
   background-color: rgb(200, 222, 239);
 }
 
-.small {
-  font-size: 0.9rem;
-}
-
 .card-title {
   font-size: x-large !important;
+}
+
+.bold-font {
+  font-weight: bold;
 }

@@ -1,6 +1,6 @@
-<h2 class="text-center m-5">Saveリスト</h2>
+<h2 class="text-center m-5">SAVE LIST</h2>
 <% unless @stores.present? %>
-  <p class="text-center text-muted">SaveされているWebookはありません。</p>
+  <p class="text-center text-muted">No Saved Webook Yet.</p>
 <% end %>
   <div class="container">
     <div class="row">
@@ -15,7 +15,7 @@
                   <aside class="col-md-8 m-0">
                     <%= store.note %>
                   </aside>
-                  <a target="_blank" href="<%= store.link %>" class="btn btn-warning small">記事を読む</a>
+                  <a target="_blank" href="<%= store.link %>" class="btn btn-warning small">READ MORE</a>
                 </div>
               </div>
             </div>

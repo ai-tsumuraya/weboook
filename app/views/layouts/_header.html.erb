@@ -1,13 +1,19 @@
 <header>
-  <nav class="navbar navbar-expand-sm justify-content-between">
+  <nav class="navbar navbar-expand-sm">
     <a class="navbar-brand nav-hover" href="/">Weboook</a>
-    <div class="navbar-nav justify-content-end">
-      <% if logged_in? %>
-        <%= link_to 'My Weboook', user_path(current_user), class: 'nav-link active nav-hover' %>
-      <% else %>
-        <%= link_to 'ログイン', login_path, class: 'nav-link active nav-hover' %>
-      <% end %>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon link1"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <% if logged_in? %>
+          <li class="nav-item"><%= link_to 'MY WEBOOOK', user_path(current_user), class: 'nav-link active nav-hover' %></li>
+          <li class="nav-item"><%= link_to 'LOGOUT', logout_path, method: :delete, class: 'nav-link active nav-hover' %></li>
+        <% else %>
+          <li class="nav-item"><%= link_to 'LOGIN', login_path, class: 'nav-link active nav-hover nav-item' %></li>
+          <li class="nav-item"><%= link_to 'SIGN UP!', signup_path, class: 'nav-link active nav-hover nav-item' %></li>
+        <% end %>
+      </ul>
     </div>
   </nav>
-  
 </header>

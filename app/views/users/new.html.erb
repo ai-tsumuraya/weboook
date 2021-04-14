@@ -1,5 +1,5 @@
 <div class="text-center">
-  <h2 class="m-5">今はじめよう！</h2>
+  <h2 class="m-5">LET'S START!</h2>
 </div>
 
 <div class="container">
@@ -12,26 +12,26 @@
         </div>
         
         <div class="form-group">
-          <%= f.label :name, '名前' %>
+          <%= f.label :name, 'User Name' %>
           <%= f.text_field :name, class: 'form-control' %>
         </div>
   
         <div class="form-group">
-          <%= f.label :email, 'メールアドレス' %>
+          <%= f.label :email, '' %>
           <%= f.email_field :email, class: 'form-control' %>
         </div>
   
         <div class="form-group">
-          <%= f.label :password, 'パスワード' %>
+          <%= f.label :password, 'Password' %>
           <%= f.password_field :password, class: 'form-control' %>
         </div>
   
         <div class="form-group">
-          <%= f.label :password_confirmation, '確認用' %>
+          <%= f.label :password_confirmation, 'Comfirm' %>
           <%= f.password_field :password_confirmation, class: 'form-control' %>
         </div>
   
-        <%= f.submit '登録', class: 'btn btn-warning btn-block' %>
+        <%= f.submit 'SIGN UP!', class: 'btn btn-warning btn-block' %>
       <% end %>
     </div>
   </div>

@@ -9,10 +9,10 @@ class BookmarksController < ApplicationController
   def create
     @bookmark = current_user.bookmarks.build(bookmark_params)
     if @bookmark.save
-      flash[:success] = 'Weboookを追加しました。'
+      flash[:success] = 'Added webook successfully.'
       redirect_to user_path(current_user)
     else
-      flash.now[:danger] = 'Weboookの追加に失敗しました。'
+      flash.now[:danger] = 'Faild to add webook.'
       render :new
     end
   end
@@ -20,7 +20,7 @@ class BookmarksController < ApplicationController
   def destroy
     puts "deleting?"
     @bookmark.destroy
-    flash[:success] = 'Weboookを削除しました。'
+    flash[:success] = 'Deleted weboook successfully.'
     redirect_back(fallback_location: root_path)
   end
   

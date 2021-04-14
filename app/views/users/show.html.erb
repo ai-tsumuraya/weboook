@@ -1,20 +1,17 @@
-<h2 class="text-center m-5">My Weboook</h2>
+<h2 class="text-center m-5">MY WEBOOOK</h2>
 <div class="container container-user-profile">
   <div class="row">
     <aside class="col-md-4 m-2 d-flex flex-column">
       <%= image_tag "w_thumnail.png", alt: "Letter W: user profile image", id: "assets", class: "image-profile mx-auto" %>
-      <p class="mt-3 mx-auto">ユーザ: <%= @user.name %></p>
+      <p class="mt-3 mx-auto">User: <%= @user.name %></p>
       <ul class="mx-auto p-0">
         <li class="mb-3">
           <% if current_user == @user %>
-            <%= link_to 'Weboookを追加', new_bookmark_path, class: 'mx-auto btn btn-lg btn-warning' %>
+            <%= link_to 'ADD WEBOOOK', new_bookmark_path, class: 'mx-auto btn btn-lg btn-warning' %>
           <% end %>
         </li>
-        <li class="mb-3 text-center"><%= link_to 'Saveリスト >', saves_user_path, class: 'text-dark' %></li>
+        <li class="mb-3 text-center"><%= link_to 'Save List >', saves_user_path, class: 'text-dark' %></li>
       </ul>
-      <div class="m-2 mx-auto">
-        <%= link_to 'ログアウト', logout_path, method: :delete, class: 'text-muted' %>
-      </div>
     </aside>
     <div class="col-sm-6 mt-5">
       <%= render 'bookmarks/bookmarks', bookmarks: @bookmarks %>

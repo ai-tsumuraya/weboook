@@ -2,12 +2,12 @@
   <div class="container">
     <div class="bg p-4 rounded">
       <div>
-          <h3>Webサイトの記事をBookmarkするサービス</h3>
-          <h1>Weboook</h1>
+          <h3 class="bold-font">Bookmark Your Favourite Article with</h3>
+          <h1 class="bold-font">Weboook</h1>
           <% if logged_in? %>
-            <%= link_to 'Weboook', new_bookmark_path, class: 'btn btn-lg btn-warning' %>
+            <%= link_to 'WEBOOOK', new_bookmark_path, class: 'btn btn-lg btn-warning' %>
           <% else %>
-            <%= link_to '今すぐ登録', signup_path, class: 'btn btn-lg btn-warning' %>
+            <%= link_to 'SIGN UP!', signup_path, class: 'btn btn-lg btn-warning' %>
           <% end %>
       </div>
     </div>
@@ -16,9 +16,9 @@
 <div class="container">
   <div class="row">
     <aside class="col-sm-6">
-      <h3>Weboookって？</h3>
-      <p class="bold rounded">Weboook(ウェブゥーク)とは、あとで読み返したいWebサイトの記事をブックマークして保存できるサービスです。</p>
-      <p>ブラウザのブックマークに入れてしまうと他のウェブサイトと混ざってしまい読み返しがしづらいことがありますよね。それを解消するのがWeboook。自分でタイトルをつけるのでなんの記事か見つけやすく、メモも残せるので、読んだときに感じたことや、意見を一緒に残しておけます。記事へのリンクも保存でき、いつでも読み返しが可能です。</p>
+      <h3>What is Weboook?</h3>
+      <p class="bold rounded">Weboook is a service you can bookmark and save your favorite article on a website. </p>
+      <p>When you added the web article in a bookmark folder on your web browser, it's difficult to find the article when you want to read again. Weboook can help you organise bookmarks for articles you-want-to-read-again! You can add a title in order to find the article easily and you also can leave notes with that article like what you feel or your opinion with the link together.</p>
     </aside>
     <div class="col-sm-6 p-0">
       <%= image_tag "books.png", alt: "books and PC", id: "assets", class: "image" %>

@@ -4,20 +4,20 @@
     <%= form_with(model: @bookmark, local: true) do |f| %>
     <%= render 'layouts/error_messages', model: f.object %>
       <div class="form-group">
-        <%= f.label :title, 'タイトル' %>
+        <%= f.label :title, 'Title' %>
         <%= f.text_field :title, class: 'form-control' %>
       </div>
 
       <div class="form-group">
-        <%= f.label :note, 'メモ' %>
+        <%= f.label :note, 'Notes' %>
         <%= f.text_field :note, class: 'form-control' %>
       </div>
 
       <div class="form-group">
-        <%= f.label :link, 'ウェブサイトリンク' %>
+        <%= f.label :link, 'Link' %>
         <%= f.text_field :link, class: 'form-control' %>
       </div>
-      <%= f.submit 'Weboook', class: 'btn btn-warning btn-block' %>
+      <%= f.submit 'WEBOOOK', class: 'btn btn-warning btn-block' %>
     <% end %>
   </div>
 </div>
